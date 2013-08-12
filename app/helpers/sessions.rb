@@ -1,7 +1,7 @@
 helpers do
 
   def current_user
-    session[:logged_in] ||= false
+    User.find_by_id(session[:logged_in])  || false
   end
 
 end
