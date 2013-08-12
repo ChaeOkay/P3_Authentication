@@ -1,9 +1,9 @@
 <div class="container">
 
-<% if !current_user %>
-    <h1>Welcome</h1>
-  <% else %>
+<% unless current_user == false %>
     <%= erb :_users_list %>
+  <% else %>
+    <h1>Welcome</h1>
 <% end %>
 
 </div>
