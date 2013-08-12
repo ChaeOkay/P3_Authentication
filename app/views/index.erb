@@ -1,18 +1,9 @@
 <div class="container">
 
-  <%# TODO:
-  1. If user is not signed in - display "Welcome".
-  2. If user is signed in then  display all users %>
-
-<!--   <% if current_user %>
-    <ul>
-      <% User.all.each do |u| %>
-          <li><%= u.name %></li>
-      <% end %>
-    </ul>
-  <% else %>
+<% if !current_user %>
     <h1>Welcome</h1>
-  <% end %>
- -->
+  <% else %>
+    <%= erb :_users_list %>
+<% end %>
 
 </div>
