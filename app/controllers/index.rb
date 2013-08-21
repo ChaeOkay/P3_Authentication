@@ -5,8 +5,6 @@ end
 
 #----------- SESSIONS -----------
 
-require 'pry'
-
 get '/sessions/new' do
   erb :sign_in
 end
