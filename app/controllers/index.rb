@@ -11,7 +11,9 @@ get '/sessions/new' do
 end
 
 post '/sessions' do
-  login
+  @user = User.find_by_email(params[:email])
+  (session[:user_id] = @user.id) if (@user.password == params[:password])
+  redirect '/'
 end
 
 delete '/sessions/:id' do
