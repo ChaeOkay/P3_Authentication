@@ -13,7 +13,7 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
-gem 'bcrypt'
+gem 'bcrypt-ruby'
 
 gem 'shotgun'
 
